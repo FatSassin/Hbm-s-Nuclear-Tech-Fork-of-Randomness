@@ -3426,6 +3426,7 @@ item.missile_kit.name=Missile Kit
 item.missile_lambda.name=Lambda-98
 item.missile_micro.name=Micro-Nuclear Missile
 item.missile_nuclear.name=Nuclear Missile
+item.missile_balefire.name=Balefire Missile
 item.missile_nuclear_cluster.name=Thermonuclear Missile
 item.missile.part.bottomSize=Bottom size
 item.missile.part.by=by

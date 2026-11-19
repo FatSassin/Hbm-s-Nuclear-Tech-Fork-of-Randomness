@@ -10,6 +10,8 @@ import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 
+import static com.hbm.main.ResourceManager.missileDoomsdayRusted_tex;
+
 public class RenderMissileNuclear extends Render {
 	
 	public RenderMissileNuclear() { }
@@ -31,9 +33,10 @@ public class RenderMissileNuclear extends Render {
 		}
 
 		if(entity instanceof EntityMissileNuclear) bindTexture(ResourceManager.missileNuclear_tex);
+		if(entity instanceof EntityMissileBalefire) bindTexture(ResourceManager.missileBalefire_tex);
 		if(entity instanceof EntityMissileMirv) bindTexture(ResourceManager.missileThermo_tex);
 		if(entity instanceof EntityMissileDoomsday) bindTexture(ResourceManager.missileDoomsday_tex);
-		if(entity instanceof EntityMissileDoomsdayRusted) bindTexture(ResourceManager.missileDoomsdayRusted_tex);
+		if(entity instanceof EntityMissileDoomsdayRusted) bindTexture(missileDoomsdayRusted_tex);
 		if(entity instanceof EntityMissileVolcano) bindTexture(ResourceManager.missileVolcano_tex);
 
 		GL11.glShadeModel(GL11.GL_SMOOTH);

@@ -6,6 +6,7 @@ import java.util.List;
 import com.hbm.blocks.ModBlocks;
 import com.hbm.config.BombConfig;
 import com.hbm.entity.effect.EntityNukeTorex;
+import com.hbm.entity.logic.EntityBalefire;
 import com.hbm.entity.logic.EntityNukeExplosionMK5;
 import com.hbm.explosion.ExplosionLarge;
 import com.hbm.items.ModItems;
@@ -68,6 +69,22 @@ public abstract class EntityMissileTier4 extends EntityMissileBaseNT {
 		@Override public void onMissileImpact(MovingObjectPosition mop) {
 			WorldUtil.loadAndSpawnEntityInWorld(EntityNukeExplosionMK5.statFac(worldObj, BombConfig.missileRadius, posX, posY, posZ));
 			EntityNukeTorex.statFacStandard(worldObj, posX, posY, posZ, BombConfig.missileRadius);
+		}
+		@Override public ItemStack getDebrisRareDrop() { return new ItemStack(ModItems.warhead_nuclear); }
+		@Override public ItemStack getMissileItemForInfo() { return new ItemStack(ModItems.missile_nuclear); }
+	}
+
+	public static class EntityMissileBalefire extends EntityMissileTier4 {
+		public EntityMissileBalefire(World world) { super(world); }
+		public EntityMissileBalefire(World world, float x, float y, float z, int a, int b) { super(world, x, y, z, a, b); }
+		@Override public void onMissileImpact(MovingObjectPosition mop) {
+			EntityBalefire bf = new EntityBalefire(worldObj);
+			bf.posX = this.posX;
+			bf.posY = this.posY;
+			bf.posZ = this.posZ;
+			bf.destructionRange = (int) 250;
+			worldObj.spawnEntityInWorld(bf);
+			EntityNukeTorex.statFacBale(worldObj, posX, posY, posZ, 250);
 		}
 		@Override public ItemStack getDebrisRareDrop() { return new ItemStack(ModItems.warhead_nuclear); }
 		@Override public ItemStack getMissileItemForInfo() { return new ItemStack(ModItems.missile_nuclear); }

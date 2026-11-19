@@ -1149,6 +1149,7 @@ public class ModItems {
 	public static Item missile_rain;
 	public static Item missile_drill;
 	public static Item missile_nuclear;
+	public static Item missile_balefire;
 	public static Item missile_nuclear_cluster;
 	public static Item missile_volcano;
 	public static Item missile_doomsday;
@@ -3359,6 +3360,7 @@ public class ModItems {
 		missile_rain = new ItemMissile(MissileFormFactor.HUGE, MissileTier.TIER3).setUnlocalizedName("missile_rain").setMaxStackSize(1).setCreativeTab(MainRegistry.missileTab).setTextureName(RefStrings.MODID + ":missile_rain");
 		missile_drill = new ItemMissile(MissileFormFactor.HUGE, MissileTier.TIER3).setUnlocalizedName("missile_drill").setMaxStackSize(1).setCreativeTab(MainRegistry.missileTab).setTextureName(RefStrings.MODID + ":missile_drill");
 		missile_nuclear = new ItemMissile(MissileFormFactor.ATLAS, MissileTier.TIER4).setUnlocalizedName("missile_nuclear").setMaxStackSize(1).setCreativeTab(MainRegistry.missileTab).setTextureName(RefStrings.MODID + ":missile_nuclear");
+		missile_balefire = new ItemMissile(MissileFormFactor.ATLAS, MissileTier.TIER4).setUnlocalizedName("missile_balefire").setMaxStackSize(1).setCreativeTab(MainRegistry.missileTab).setTextureName(RefStrings.MODID + ":missile_balefire");
 		missile_nuclear_cluster = new ItemMissile(MissileFormFactor.ATLAS, MissileTier.TIER4).setUnlocalizedName("missile_nuclear_cluster").setMaxStackSize(1).setCreativeTab(MainRegistry.missileTab).setTextureName(RefStrings.MODID + ":missile_nuclear_cluster");
 		missile_volcano = new ItemMissile(MissileFormFactor.ATLAS, MissileTier.TIER4).setUnlocalizedName("missile_volcano").setMaxStackSize(1).setCreativeTab(MainRegistry.missileTab).setTextureName(RefStrings.MODID + ":missile_volcano");
 		missile_doomsday = new ItemMissile(MissileFormFactor.ATLAS, MissileTier.TIER4).setUnlocalizedName("missile_doomsday").setMaxStackSize(1).setCreativeTab(MainRegistry.missileTab).setTextureName(RefStrings.MODID + ":missile_doomsday");
@@ -5497,6 +5499,7 @@ public class ModItems {
 		GameRegistry.registerItem(missile_shuttle, missile_shuttle.getUnlocalizedName());
 		//Tier 4
 		GameRegistry.registerItem(missile_nuclear, missile_nuclear.getUnlocalizedName());
+		GameRegistry.registerItem(missile_balefire, missile_balefire.getUnlocalizedName());
 		GameRegistry.registerItem(missile_nuclear_cluster, missile_nuclear_cluster.getUnlocalizedName());
 		GameRegistry.registerItem(missile_volcano, missile_volcano.getUnlocalizedName());
 		GameRegistry.registerItem(missile_doomsday, missile_doomsday.getUnlocalizedName());
