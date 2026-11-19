@@ -86,7 +86,7 @@ public abstract class EntityMissileTier4 extends EntityMissileBaseNT {
 			worldObj.spawnEntityInWorld(bf);
 			EntityNukeTorex.statFacBale(worldObj, posX, posY, posZ, 250);
 		}
-		@Override public ItemStack getDebrisRareDrop() { return new ItemStack(ModItems.warhead_nuclear); }
+		@Override public ItemStack getDebrisRareDrop() { return new ItemStack(ModItems.warhead_balefire); }
 		@Override public ItemStack getMissileItemForInfo() { return new ItemStack(ModItems.missile_nuclear); }
 	}
 	

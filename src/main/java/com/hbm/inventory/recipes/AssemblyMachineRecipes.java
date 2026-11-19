@@ -812,6 +812,10 @@ public class AssemblyMachineRecipes extends GenericRecipes<GenericRecipe> {
 		this.register(new GenericRecipe("ass.warheadnuke").setup(400, 100).outputItems(new ItemStack(ModItems.warhead_nuclear, 1))
 				.inputItems(new OreDictStack(TI.plateCast(), 12), new OreDictStack(PB.plateCast(), 6), new OreDictStack(U235.billet(), 6), new ComparableStack(ModItems.cordite, 12), new ComparableStack(ModItems.circuit, 1, EnumCircuitType.CONTROLLER))
 				.setPools528(GenericRecipes.POOL_PREFIX_528 + "controller"));
+		this.register(new GenericRecipe("ass.warheadbf").setup(400, 100).outputItems(new ItemStack(ModItems.warhead_balefire, 1))
+			.inputItems(new OreDictStack(TI.plateCast(), 12), new OreDictStack(PB.plateCast(), 6), new ComparableStack(ModItems.egg_balefire, 1), new ComparableStack(ModItems.cell_antimatter, 6), new ComparableStack(ModItems.circuit, 3, EnumCircuitType.CONTROLLER_ADVANCED))
+			.inputFluids(new FluidStack(Fluids.BALEFIRE, 1000))
+			.setPools528(GenericRecipes.POOL_PREFIX_528 + "controller"));
 		this.register(new GenericRecipe("ass.warheadthermonuke").setup(600, 100).outputItems(new ItemStack(ModItems.warhead_mirv, 1))
 				.inputItems(new OreDictStack(TI.plateCast(), 12), new OreDictStack(PB.plateCast(), 6), new OreDictStack(PU239.billet(), 8), new ComparableStack(ModItems.ball_tatb, 12), new ComparableStack(ModItems.circuit, 2, EnumCircuitType.CONTROLLER_ADVANCED))
 				.inputFluids(new FluidStack(Fluids.DEUTERIUM, 4_000))

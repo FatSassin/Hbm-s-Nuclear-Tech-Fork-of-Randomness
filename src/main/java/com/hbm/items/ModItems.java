@@ -608,6 +608,7 @@ public class ModItems {
 	public static Item warhead_buster_medium;
 	public static Item warhead_buster_large;
 	public static Item warhead_nuclear;
+	public static Item warhead_balefire;
 	public static Item warhead_mirv;
 	public static Item warhead_volcano;
 
@@ -2573,6 +2574,7 @@ public class ModItems {
 		warhead_buster_medium = new Item().setUnlocalizedName("warhead_buster_medium").setCreativeTab(MainRegistry.partsTab).setTextureName(RefStrings.MODID + ":warhead_buster_medium");
 		warhead_buster_large = new Item().setUnlocalizedName("warhead_buster_large").setCreativeTab(MainRegistry.partsTab).setTextureName(RefStrings.MODID + ":warhead_buster_large");
 		warhead_nuclear = new Item().setUnlocalizedName("warhead_nuclear").setCreativeTab(MainRegistry.partsTab).setTextureName(RefStrings.MODID + ":warhead_nuclear");
+		warhead_balefire = new Item().setUnlocalizedName("warhead_balefire").setCreativeTab(MainRegistry.partsTab).setTextureName(RefStrings.MODID + ":warhead_balefire");
 		warhead_mirv = new Item().setUnlocalizedName("warhead_mirv").setCreativeTab(MainRegistry.partsTab).setTextureName(RefStrings.MODID + ":warhead_mirv");
 		warhead_volcano = new Item().setUnlocalizedName("warhead_volcano").setCreativeTab(MainRegistry.partsTab).setTextureName(RefStrings.MODID + ":warhead_volcano");
 
@@ -4935,6 +4937,7 @@ public class ModItems {
 		GameRegistry.registerItem(warhead_buster_medium, warhead_buster_medium.getUnlocalizedName());
 		GameRegistry.registerItem(warhead_buster_large, warhead_buster_large.getUnlocalizedName());
 		GameRegistry.registerItem(warhead_nuclear, warhead_nuclear.getUnlocalizedName());
+		GameRegistry.registerItem(warhead_balefire, warhead_balefire.getUnlocalizedName());
 		GameRegistry.registerItem(warhead_mirv, warhead_mirv.getUnlocalizedName());
 		GameRegistry.registerItem(warhead_volcano, warhead_volcano.getUnlocalizedName());
 		GameRegistry.registerItem(fuel_tank_small, fuel_tank_small.getUnlocalizedName());
