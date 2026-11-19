@@ -1,5 +1,8 @@
 # HBM's Nuclear Tech Mod for Minecraft 1.7.10
 
+Fork i made to goof around and add stupid things idk yet.
+100% organic no AI ever that's a promise. Pure human sweat, tears and brainmatter.
+
 [NTM on Modrinth](https://modrinth.com/mod/ntm)
 
 [NTM on CurseForge](https://www.curseforge.com/minecraft/mc-mods/hbms-nuclear-tech-mod)
