@@ -156,7 +156,9 @@ public class HazardRegistry {
 	public static final HazardTypeBase COAL = new HazardTypeCoal();
 	public static final HazardTypeBase HYDROACTIVE = new HazardTypeHydroactive();
 	public static final HazardTypeBase EXPLOSIVE = new HazardTypeExplosive();
-
+	
+	//test taint hazard idk
+	public static final HazardTypeBase TAINT = new HazardTypeTaint();
 	public static void registerItems() {
 
 		HazardSystem.register(Items.gunpowder, makeData(EXPLOSIVE, 1F));
