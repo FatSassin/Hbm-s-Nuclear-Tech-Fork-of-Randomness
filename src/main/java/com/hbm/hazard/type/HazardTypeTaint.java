@@ -29,10 +29,10 @@ public class HazardTypeTaint extends HazardTypeBase {
 
 		float d = (float)(Math.floor(level * 10000F)) / 10F;
 		list.add(EnumChatFormatting.LIGHT_PURPLE + "[" + I18nUtil.resolveKey("trait.taint") + "]");
-		list.add(EnumChatFormatting.DARK_PURPLE + "" + d + "Taint/s");
+		list.add(EnumChatFormatting.DARK_PURPLE + "" + d + " Taint/s");
 
 		if(stack.stackSize > 1) {
-			list.add(EnumChatFormatting.DARK_PURPLE + "Stack: " + ((Math.floor(level * 10000F * stack.stackSize) / 10F) + "Taint/s"));
+			list.add(EnumChatFormatting.DARK_PURPLE + "Stack: " + ((Math.floor(level * 10000F * stack.stackSize) / 10F) + " Taint/s"));
 		}
 	}
 
