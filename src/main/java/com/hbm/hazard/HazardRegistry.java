@@ -500,7 +500,7 @@ public class HazardRegistry {
 		HazardSystem.register(holotape_damaged, makeData(DIGAMMA, 1_000F));
 		
 		//taint for testing purpose
-		HazardSystem.register(taint_barrel, makeData(TAINT, 0.15F));
+		HazardSystem.register(taint_barrel, makeData(TAINT, 0.015F));
 
 		/*
 		 * Blacklist

@@ -103,7 +103,6 @@ public class ContaminationUtil {
 		else
 			HbmLivingProps.incrementAsbestos(entity, i);
 	}
-
 	/// DIGAMMA ///
 	public static void applyDigammaData(Entity e, float f) {
 

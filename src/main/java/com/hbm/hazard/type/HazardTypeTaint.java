@@ -2,6 +2,7 @@ package com.hbm.hazard.type;
 
 import java.util.List;
 
+import com.hbm.extprop.HbmLivingProps;
 import com.hbm.hazard.modifier.HazardModifier;
 import com.hbm.util.ContaminationUtil;
 import com.hbm.util.i18n.I18nUtil;
@@ -16,7 +17,6 @@ public class HazardTypeTaint extends HazardTypeBase {
 
 	@Override
 	public void onUpdate(EntityLivingBase target, float level, ItemStack stack) {
-		ContaminationUtil.applyDigammaData(target, level / 20F);
 	}
 
 	@Override
@@ -29,10 +29,10 @@ public class HazardTypeTaint extends HazardTypeBase {
 
 		float d = (float)(Math.floor(level * 10000F)) / 10F;
 		list.add(EnumChatFormatting.LIGHT_PURPLE + "[" + I18nUtil.resolveKey("trait.taint") + "]");
-		list.add(EnumChatFormatting.DARK_PURPLE + "" + d + " Taint/s");
+		list.add(EnumChatFormatting.DARK_PURPLE + "" + d + "TAINT/s");
 
 		if(stack.stackSize > 1) {
-			list.add(EnumChatFormatting.DARK_PURPLE + "Stack: " + ((Math.floor(level * 10000F * stack.stackSize) / 10F) + " Taint/s"));
+			list.add(EnumChatFormatting.DARK_PURPLE + "Stack: " + ((Math.floor(level * 10000F * stack.stackSize) / 10F) + "TAINT/s"));
 		}
 	}
 

@@ -54,6 +54,7 @@ public class HbmLivingProps implements IExtendedEntityProperties {
 	public int blackFire;
 	private int anthraxTimer;
 	private float anthraxLastHealth;
+	private float taint;
 	private List<ContaminationEffect> contamination = new ArrayList();
 
 	public HbmLivingProps(EntityLivingBase entity) {
@@ -291,7 +292,18 @@ public class HbmLivingProps implements IExtendedEntityProperties {
 		HbmLivingProps data = HbmLivingProps.getData(entity);
 		data.anthraxLastHealth = health;
 	}
+	
+	/// TAINT ///
+	private static void applyTaint(EntityLivingBase entity) {
+		HbmLivingProps data = HbmLivingProps.getData(entity);
 
+		float taint = getData(entity).taint;
+		if(taint > 2500)
+			taint = 2500;
+		if(taint < 0)
+			taint = 0;
+	}
+	
 	@Override
 	public void init(Entity entity, World world) { }
 
@@ -322,7 +334,7 @@ public class HbmLivingProps implements IExtendedEntityProperties {
 			}
 		}
 	}
-
+	
 	@Deprecated
 	@Override
 	public void saveNBTData(NBTTagCompound nbt) {
