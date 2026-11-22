@@ -159,6 +159,8 @@ public class HazardRegistry {
 	
 	//test taint hazard idk
 	public static final HazardTypeBase TAINT = new HazardTypeTaint();
+	
+	
 	public static void registerItems() {
 
 		HazardSystem.register(Items.gunpowder, makeData(EXPLOSIVE, 1F));
@@ -496,6 +498,9 @@ public class HazardRegistry {
 		HazardSystem.register(nuke_fstbmb, makeData(DIGAMMA, 0.01F));
 		HazardSystem.register(DictFrame.fromOne(ModItems.holotape_image, EnumHoloImage.HOLO_RESTORED), makeData(DIGAMMA, 1F));
 		HazardSystem.register(holotape_damaged, makeData(DIGAMMA, 1_000F));
+		
+		//taint for testing purpose
+		HazardSystem.register(taint_barrel, makeData(TAINT, 0.15F));
 
 		/*
 		 * Blacklist

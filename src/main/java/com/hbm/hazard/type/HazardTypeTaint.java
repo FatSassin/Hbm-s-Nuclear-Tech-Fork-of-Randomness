@@ -28,11 +28,11 @@ public class HazardTypeTaint extends HazardTypeBase {
 		level = HazardModifier.evalAllModifiers(stack, player, level, modifiers);
 
 		float d = (float)(Math.floor(level * 10000F)) / 10F;
-		list.add(EnumChatFormatting.RED + "[" + I18nUtil.resolveKey("trait.digamma") + "]");
-		list.add(EnumChatFormatting.DARK_RED + "" + d + "mDRX/s");
+		list.add(EnumChatFormatting.LIGHT_PURPLE + "[" + I18nUtil.resolveKey("trait.taint") + "]");
+		list.add(EnumChatFormatting.DARK_PURPLE + "" + d + "Taint/s");
 
 		if(stack.stackSize > 1) {
-			list.add(EnumChatFormatting.DARK_RED + "Stack: " + ((Math.floor(level * 10000F * stack.stackSize) / 10F) + "mDRX/s"));
+			list.add(EnumChatFormatting.DARK_PURPLE + "Stack: " + ((Math.floor(level * 10000F * stack.stackSize) / 10F) + "Taint/s"));
 		}
 	}
 
