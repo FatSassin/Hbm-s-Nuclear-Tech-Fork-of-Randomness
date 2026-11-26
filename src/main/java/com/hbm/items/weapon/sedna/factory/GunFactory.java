@@ -2,6 +2,7 @@ package com.hbm.items.weapon.sedna.factory;
 
 import java.util.function.BiConsumer;
 
+import com.hbm.handler.Identity;
 import com.hbm.interfaces.IOrderedEnum;
 import com.hbm.items.ItemEnumMulti;
 import com.hbm.items.ModItems;
@@ -19,6 +20,7 @@ import com.hbm.main.MainRegistry;
 import com.hbm.particle.SpentCasing;
 import com.hbm.particle.SpentCasing.CasingType;
 
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
@@ -91,6 +93,18 @@ public class GunFactory {
 
 		/// PROXY BULLSHIT ///
 		MainRegistry.proxy.registerGunCfg();
+	}
+	
+	public static void grantCorruptedItem(EntityPlayer player) {
+		
+		/// preliminary crap code ///
+		int id = Identity.value % 3;
+		ItemStack stack = id == 0 ? new ItemStack(ModItems.gun_henry_counter) : id == 2 ? new ItemStack(ModItems.gun_minigun_hell) : new ItemStack(ModItems.gun_missile_launcher_laser);
+		if(!player.inventory.addItemStackToInventory(stack)) {
+			player.dropPlayerItemWithRandomChoice(stack, false);
+		} else {
+			player.inventoryContainer.detectAndSendChanges();
+		}
 	}
 	
 	public static BiConsumer<ItemStack, LambdaContext> LAMBDA_DEBUG_DECIDER = (stack, ctx) -> {
